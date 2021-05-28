@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style.css">
-    <title>Sizing Grid Items!</title>
+    <title>Grid Template Areas: Line Names from Grid Areas!</title>
 </head>
 
 <body>
@@ -18,12 +18,11 @@
         <div class="item item6">6</div>
         <div class="item item7">7</div>
         <div class="item item8">8</div>
-        <div class="item item8">💩💩</div>
         <div class="item item9">9</div>
-        <div class="item item10">🍎</div>
+        <div class="item item10">10</div>
         <div class="item item11">11</div>
         <div class="item item12">12</div>
-        <div class="item item13">🤮</div>
+        <div class="item item13">13</div>
         <div class="item item14">14</div>
         <div class="item item15">15</div>
         <div class="item item16">16</div>
@@ -47,13 +46,15 @@
         .container {
             display: grid;
             grid-gap: 20px;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas:
+                "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+                "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+                "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+                "💩 💩 💩 💩 🍔 🍔 🍔 🍔";
         }
 
-        .item9 {
-            background: mistyrose;
-            grid-column: span 10;
-            grid-row: span 2;
+        .item3 {
+            grid-column: 💩-start / 🍔-end;
         }
     </style>
 </body>
